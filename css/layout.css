@@ -2,3 +2,27 @@ header .header-content .header-content-inner h1.brand {
 	font-size: 72px;
 	margin-top: 24px;
 }
+
+.team-member {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+.team a:not(:hover) {
+	color: #fff;
+}
+
+.team-member img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin-bottom: 10px;
+}
+
+.team-member .name {
+	font-size: 16px;
+}
+
+.contact-wrapper {
+	margin-top: 100px;
+}
