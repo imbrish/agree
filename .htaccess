@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Redirect trailing slash if not a folder
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# Redirect to root unless url points at a file (but not directory)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ / [L,R=301]
