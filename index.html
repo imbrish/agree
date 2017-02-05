@@ -61,6 +61,12 @@
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">Agree</a>
+                
+                <span class="demo-btn-wrapper">
+                    <a href="intent://share.proto.io/T6FQY8/#Intent;scheme=https;package=io.proto.player;end" class="btn btn-default btn-xl sr-button hidden-md hidden-lg">Open the app!</a>
+                    
+                    <a href="https://pr.to/T6FQY8/" class="btn btn-default btn-xl sr-button hidden-xs hidden-sm demo-btn">Try it now!</a>
+                </span>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -257,16 +263,16 @@
     </section>
 
     <aside class="bg-primary">
-        <div id="demo-btn-wrapper" class="container text-center">
+        <div class="container text-center demo-btn-wrapper">
             <div class="call-to-action">
                 <h2>Free Download at Google Play and App Store!</h2>
                 
-                <a href="intent://share.proto.io/T6FQY8/#Intent;scheme=https;package=io.proto.player;end" class="btn btn-default btn-xl sr-button hidden-md hidden-lg">Open in app!</a>
+                <a href="intent://share.proto.io/T6FQY8/#Intent;scheme=https;package=io.proto.player;end" class="btn btn-default btn-xl sr-button hidden-md hidden-lg">Open the app!</a>
                 
-                <a id="demo-btn" href="https://pr.to/T6FQY8/" class="btn btn-default btn-xl sr-button hidden-xs hidden-sm">Try it now!</a>
+                <a href="https://pr.to/T6FQY8/" class="btn btn-default btn-xl sr-button hidden-xs hidden-sm demo-btn">Try it now!</a>
             </div>
         </div>
-        <div id="demo-wrapper" class="container text-center" style="display: none;">
+        <div class="container text-center demo-wrapper" style="display: none;">
             <div class="protoio-embed-prototype" data-code="T6FQY8" data-show-sidebuttons="0" style="width: 100%; height: 800px;"></div>
         </div>
     </aside>
@@ -466,16 +472,16 @@
                 document.body.appendChild(jsElm);
             }
 
-            $('#demo-btn').on('click', function (e) {
+            $('.demo-btn').on('click', function (e) {
                 e.preventDefault();
 
-                $('#demo-btn-wrapper').hide();
-                $('#demo-wrapper').show();
+                $('.demo-btn-wrapper').hide();
+                $('.demo-wrapper').show();
 
                 loadJS('https://static.proto.io/api/widget-embed.js');
 
                 $('html, body').animate({
-                    scrollTop: $("#demo-wrapper").offset().top - 80
+                    scrollTop: $(".demo-wrapper").offset().top - 80
                 }, 2000);
 
                 return false;
